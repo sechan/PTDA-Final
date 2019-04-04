@@ -1,0 +1,142 @@
+02-Apr-2019 16:12:23.046 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+02-Apr-2019 16:12:23.046 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+02-Apr-2019 16:12:23.062 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@146e7f4c')
+02-Apr-2019 16:31:15.927 SEVERE [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [An exception occurred processing JSP page [/jsp/registerToDB.jsp] at line [13]
+
+10: String email = request.getParameter("email");
+11: String password = request.getParameter("psw");
+12: username = username.replace("'", "\\'");
+13: diagnostic = diagnostic.replace("'", "\\'");
+14: email = email.replace("'", "\\'");
+15: password = password.replace("'", "\\'");
+16: 
+
+
+Stacktrace:] with root cause
+ java.lang.NullPointerException
+	at org.apache.jsp.jsp.registerToDB_jsp._jspService(registerToDB_jsp.java:125)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+02-Apr-2019 16:33:14.512 SEVERE [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [An exception occurred processing JSP page [/jsp/registerToDB.jsp] at line [13]
+
+10: String email = request.getParameter("email");
+11: String password = request.getParameter("psw");
+12: username = username.replace("'", "\\'");
+13: diagnostic = diagnostic.replace("'", "\\'");
+14: email = email.replace("'", "\\'");
+15: password = password.replace("'", "\\'");
+16: 
+
+
+Stacktrace:] with root cause
+ java.lang.NullPointerException
+	at org.apache.jsp.jsp.registerToDB_jsp._jspService(registerToDB_jsp.java:125)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+02-Apr-2019 20:08:30.055 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+02-Apr-2019 20:08:30.056 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+02-Apr-2019 20:08:30.057 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@424c4b7e')
+02-Apr-2019 20:08:30.273 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+02-Apr-2019 20:08:30.273 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+02-Apr-2019 20:10:12.485 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+02-Apr-2019 20:10:12.485 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+02-Apr-2019 20:10:12.486 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@5703e0d4')
+02-Apr-2019 20:10:12.714 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+02-Apr-2019 20:10:12.714 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+02-Apr-2019 20:12:57.949 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+02-Apr-2019 20:12:57.949 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+02-Apr-2019 20:12:57.950 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@7f1398e2')
+02-Apr-2019 20:12:58.155 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+02-Apr-2019 20:12:58.155 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+02-Apr-2019 20:15:09.224 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+02-Apr-2019 20:15:09.224 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+02-Apr-2019 20:15:09.226 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@35f8824c')
+02-Apr-2019 20:15:30.657 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+02-Apr-2019 20:15:30.657 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+02-Apr-2019 20:16:15.699 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+02-Apr-2019 20:16:15.699 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+02-Apr-2019 20:16:15.700 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@613d7c4c')
+02-Apr-2019 21:40:01.704 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+02-Apr-2019 21:40:01.704 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+02-Apr-2019 21:40:01.705 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@613cf32')
+02-Apr-2019 21:40:01.921 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+02-Apr-2019 21:40:01.921 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+02-Apr-2019 21:41:13.753 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+02-Apr-2019 21:41:13.753 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+02-Apr-2019 21:41:13.755 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@424c4b7e')
+02-Apr-2019 21:41:13.967 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+02-Apr-2019 21:41:13.967 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+02-Apr-2019 21:41:16.718 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+02-Apr-2019 21:41:16.718 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+02-Apr-2019 21:41:16.719 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@c26a8d1')
+02-Apr-2019 21:41:16.935 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+02-Apr-2019 21:41:16.935 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+02-Apr-2019 21:45:31.920 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+02-Apr-2019 21:45:31.920 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+02-Apr-2019 21:45:31.922 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@c26a8d1')
+02-Apr-2019 21:45:32.156 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+02-Apr-2019 21:45:32.156 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+02-Apr-2019 21:50:00.617 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+02-Apr-2019 21:50:00.617 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+02-Apr-2019 21:50:00.618 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@5703e0d4')
+02-Apr-2019 21:50:00.814 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+02-Apr-2019 21:50:00.814 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+02-Apr-2019 22:01:44.816 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+02-Apr-2019 22:01:44.816 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+02-Apr-2019 22:01:44.817 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@76c8a9c8')
+02-Apr-2019 22:07:15.292 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+02-Apr-2019 22:07:15.292 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()

@@ -1,0 +1,2101 @@
+25-Mar-2019 17:59:05.650 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+25-Mar-2019 17:59:05.650 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+25-Mar-2019 17:59:05.652 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@13d2f5b5')
+25-Mar-2019 17:59:22.001 SEVERE [http-nio-8080-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [108] in the jsp file: [/jsp/decision.jsp]
+String literal is not properly closed by a double-quote
+105: {
+106: 	String currentQuestion = rs.getString("question");
+107: 	out.println("<center>");
+108: 	out.println("<p id = 'question'>"+currentQuestion+"</p>);
+109: 	out.println("<table id='likert'> <tr>");
+110: 	out.println("<td><input id='radScoreStart' type='radio' name='Score' value='1' /></td>");
+111: 	out.println("<td><input type='radio' name='Score' value='2' /></td>");
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [108] in the jsp file: [/jsp/decision.jsp]
+String literal is not properly closed by a double-quote
+105: {
+106: 	String currentQuestion = rs.getString("question");
+107: 	out.println("<center>");
+108: 	out.println("<p id = 'question'>"+currentQuestion+"</p>);
+109: 	out.println("<table id='likert'> <tr>");
+110: 	out.println("<td><input id='radScoreStart' type='radio' name='Score' value='1' /></td>");
+111: 	out.println("<td><input type='radio' name='Score' value='2' /></td>");
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+25-Mar-2019 18:10:55.417 SEVERE [http-nio-8080-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [89] in the jsp file: [/jsp/decision.jsp]
+currentQuestion cannot be resolved to a variable
+86: 	questions[counter] = rs.getString("questionText");
+87: 	counter++;
+88: 	out.println("<center>");
+89: 	out.println("<p id = 'question'>"+currentQuestion+"</p>");
+90: 	out.println("<table id='likert'> <tr>");
+91: 	out.println("<td><input id='radScoreStart' type='radio' name='Score' value='1' /></td>");
+92: 	out.println("<td><input type='radio' name='Score' value='2' /></td>");
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [89] in the jsp file: [/jsp/decision.jsp]
+currentQuestion cannot be resolved to a variable
+86: 	questions[counter] = rs.getString("questionText");
+87: 	counter++;
+88: 	out.println("<center>");
+89: 	out.println("<p id = 'question'>"+currentQuestion+"</p>");
+90: 	out.println("<table id='likert'> <tr>");
+91: 	out.println("<td><input id='radScoreStart' type='radio' name='Score' value='1' /></td>");
+92: 	out.println("<td><input type='radio' name='Score' value='2' /></td>");
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+25-Mar-2019 18:25:36.356 SEVERE [http-nio-8080-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [110] in the jsp file: [/jsp/decision.jsp]
+String literal is not properly closed by a double-quote
+107: 	out.println("currentQuestion++; document.getElementById('question'.innerHTML = questions[currentQuestion];");
+108: 	out.println("if(currentQUestion == 3) { if(parseInt(document.getElementById('response1').value)+parseInt(document.getElementById('response2').value)+parseInt(document.getElementById('response1').value) > = 12)");
+109: 	out.println("{ for(var i = 2; i < "+size+"; i++) { var id = 'response'+(i+1); document.getElementById(id).value = 1;}");
+110: 	out.println("window.location.replace('decisionGuide.jsp');}}}});
+111: 	out.println("</script>");
+112: 	
+113: 
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [110] in the jsp file: [/jsp/decision.jsp]
+String literal is not properly closed by a double-quote
+107: 	out.println("currentQuestion++; document.getElementById('question'.innerHTML = questions[currentQuestion];");
+108: 	out.println("if(currentQUestion == 3) { if(parseInt(document.getElementById('response1').value)+parseInt(document.getElementById('response2').value)+parseInt(document.getElementById('response1').value) > = 12)");
+109: 	out.println("{ for(var i = 2; i < "+size+"; i++) { var id = 'response'+(i+1); document.getElementById(id).value = 1;}");
+110: 	out.println("window.location.replace('decisionGuide.jsp');}}}});
+111: 	out.println("</script>");
+112: 	
+113: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+25-Mar-2019 18:55:04.393 SEVERE [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [113] in the jsp file: [/jsp/decision.jsp]
+Syntax error on tokens, delete these tokens
+110: 	out.println("$(window).on('load', function(){ document.getElementById('question').innerHTML = questions[currentQuestion];});");
+111: 	
+112: 	out.println("function nextQuestion() {");
+113: 	<% 
+114: 		String score = request.getParameter("Score");
+115: 		out.println(score);
+116: 	%>
+
+
+An error occurred at line: [268] in the generated java file: [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\work\Catalina\localhost\ROOT\org\apache\jsp\jsp\decision_jsp.java]
+Syntax error, insert "Finally" to complete TryStatement
+
+An error occurred at line: [269] in the generated java file: [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\work\Catalina\localhost\ROOT\org\apache\jsp\jsp\decision_jsp.java]
+Syntax error, insert "}" to complete ClassBody
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [113] in the jsp file: [/jsp/decision.jsp]
+Syntax error on tokens, delete these tokens
+110: 	out.println("$(window).on('load', function(){ document.getElementById('question').innerHTML = questions[currentQuestion];});");
+111: 	
+112: 	out.println("function nextQuestion() {");
+113: 	<% 
+114: 		String score = request.getParameter("Score");
+115: 		out.println(score);
+116: 	%>
+
+
+An error occurred at line: [268] in the generated java file: [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\work\Catalina\localhost\ROOT\org\apache\jsp\jsp\decision_jsp.java]
+Syntax error, insert "Finally" to complete TryStatement
+
+An error occurred at line: [269] in the generated java file: [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\work\Catalina\localhost\ROOT\org\apache\jsp\jsp\decision_jsp.java]
+Syntax error, insert "}" to complete ClassBody
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+25-Mar-2019 19:52:19.142 SEVERE [http-nio-8080-exec-4] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [7] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+4: HttpSession sess = request.getSession();
+5: String id = (String)sess.getAttribute("ID");
+6: try {
+7: 	JSONObject responses = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+8: 	out.println(responses);
+9: 
+10: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+
+
+An error occurred at line: [7] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+4: HttpSession sess = request.getSession();
+5: String id = (String)sess.getAttribute("ID");
+6: try {
+7: 	JSONObject responses = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+8: 	out.println(responses);
+9: 
+10: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+
+
+An error occurred at line: [7] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONValue cannot be resolved
+4: HttpSession sess = request.getSession();
+5: String id = (String)sess.getAttribute("ID");
+6: try {
+7: 	JSONObject responses = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+8: 	out.println(responses);
+9: 
+10: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [7] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+4: HttpSession sess = request.getSession();
+5: String id = (String)sess.getAttribute("ID");
+6: try {
+7: 	JSONObject responses = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+8: 	out.println(responses);
+9: 
+10: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+
+
+An error occurred at line: [7] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+4: HttpSession sess = request.getSession();
+5: String id = (String)sess.getAttribute("ID");
+6: try {
+7: 	JSONObject responses = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+8: 	out.println(responses);
+9: 
+10: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+
+
+An error occurred at line: [7] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONValue cannot be resolved
+4: HttpSession sess = request.getSession();
+5: String id = (String)sess.getAttribute("ID");
+6: try {
+7: 	JSONObject responses = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+8: 	out.println(responses);
+9: 
+10: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+25-Mar-2019 20:07:18.248 SEVERE [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [8] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+5: String id = (String)sess.getAttribute("ID");
+6: try {
+7: 	String data = request.getParameter("responseField");
+8: 	JSONObject inp = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+9: 	//JSONObject responses = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+10: 	out.println(inp);
+11: 
+
+
+An error occurred at line: [8] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+5: String id = (String)sess.getAttribute("ID");
+6: try {
+7: 	String data = request.getParameter("responseField");
+8: 	JSONObject inp = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+9: 	//JSONObject responses = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+10: 	out.println(inp);
+11: 
+
+
+An error occurred at line: [8] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONValue cannot be resolved
+5: String id = (String)sess.getAttribute("ID");
+6: try {
+7: 	String data = request.getParameter("responseField");
+8: 	JSONObject inp = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+9: 	//JSONObject responses = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+10: 	out.println(inp);
+11: 
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [8] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+5: String id = (String)sess.getAttribute("ID");
+6: try {
+7: 	String data = request.getParameter("responseField");
+8: 	JSONObject inp = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+9: 	//JSONObject responses = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+10: 	out.println(inp);
+11: 
+
+
+An error occurred at line: [8] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+5: String id = (String)sess.getAttribute("ID");
+6: try {
+7: 	String data = request.getParameter("responseField");
+8: 	JSONObject inp = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+9: 	//JSONObject responses = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+10: 	out.println(inp);
+11: 
+
+
+An error occurred at line: [8] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONValue cannot be resolved
+5: String id = (String)sess.getAttribute("ID");
+6: try {
+7: 	String data = request.getParameter("responseField");
+8: 	JSONObject inp = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+9: 	//JSONObject responses = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+10: 	out.println(inp);
+11: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+25-Mar-2019 20:08:08.470 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\work\Catalina\localhost\ROOT\org\apache\jsp\jsp\decisionGuide_jsp.java]
+Only a type can be imported. jso.JSONObject resolves to a package
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String data = request.getParameter("responseField");
+10: 	JSONObject inp = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+11: 	//JSONObject responses = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+12: 	out.println(inp);
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String data = request.getParameter("responseField");
+10: 	JSONObject inp = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+11: 	//JSONObject responses = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+12: 	out.println(inp);
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONValue cannot be resolved
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String data = request.getParameter("responseField");
+10: 	JSONObject inp = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+11: 	//JSONObject responses = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+12: 	out.println(inp);
+13: 
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\work\Catalina\localhost\ROOT\org\apache\jsp\jsp\decisionGuide_jsp.java]
+Only a type can be imported. jso.JSONObject resolves to a package
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String data = request.getParameter("responseField");
+10: 	JSONObject inp = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+11: 	//JSONObject responses = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+12: 	out.println(inp);
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String data = request.getParameter("responseField");
+10: 	JSONObject inp = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+11: 	//JSONObject responses = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+12: 	out.println(inp);
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONValue cannot be resolved
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String data = request.getParameter("responseField");
+10: 	JSONObject inp = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+11: 	//JSONObject responses = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+12: 	out.println(inp);
+13: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+25-Mar-2019 20:09:30.538 SEVERE [http-nio-8080-exec-4] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\work\Catalina\localhost\ROOT\org\apache\jsp\jsp\decisionGuide_jsp.java]
+The import jso cannot be resolved
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String data = request.getParameter("responseField");
+10: 	JSONObject inp = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+11: 	//JSONObject responses = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+12: 	out.println(inp);
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String data = request.getParameter("responseField");
+10: 	JSONObject inp = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+11: 	//JSONObject responses = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+12: 	out.println(inp);
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONValue cannot be resolved
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String data = request.getParameter("responseField");
+10: 	JSONObject inp = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+11: 	//JSONObject responses = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+12: 	out.println(inp);
+13: 
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\work\Catalina\localhost\ROOT\org\apache\jsp\jsp\decisionGuide_jsp.java]
+The import jso cannot be resolved
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String data = request.getParameter("responseField");
+10: 	JSONObject inp = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+11: 	//JSONObject responses = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+12: 	out.println(inp);
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String data = request.getParameter("responseField");
+10: 	JSONObject inp = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+11: 	//JSONObject responses = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+12: 	out.println(inp);
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONValue cannot be resolved
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String data = request.getParameter("responseField");
+10: 	JSONObject inp = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+11: 	//JSONObject responses = (JSONObject) JSONValue.parse(request.getParameter("responseField"));
+12: 	out.println(inp);
+13: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+25-Mar-2019 20:18:41.830 SEVERE [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\work\Catalina\localhost\ROOT\org\apache\jsp\jsp\decisionGuide_jsp.java]
+Only a type can be imported. jso.JSONObject resolves to a package
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\work\Catalina\localhost\ROOT\org\apache\jsp\jsp\decisionGuide_jsp.java]
+Only a type can be imported. jso.JSONObject resolves to a package
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+25-Mar-2019 20:20:22.080 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\work\Catalina\localhost\ROOT\org\apache\jsp\jsp\decisionGuide_jsp.java]
+Only a type can be imported. jso.JSONObject resolves to a package
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\work\Catalina\localhost\ROOT\org\apache\jsp\jsp\decisionGuide_jsp.java]
+Only a type can be imported. jso.JSONObject resolves to a package
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+25-Mar-2019 20:31:55.128 SEVERE [http-nio-8080-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [9] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+6: String id = (String)sess.getAttribute("ID");
+7: try {
+8: 	String responses = request.getParameter("responseField");
+9: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+10: 
+11: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+6: String id = (String)sess.getAttribute("ID");
+7: try {
+8: 	String responses = request.getParameter("responseField");
+9: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+10: 
+11: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONValue cannot be resolved
+6: String id = (String)sess.getAttribute("ID");
+7: try {
+8: 	String responses = request.getParameter("responseField");
+9: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+10: 
+11: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+12: 
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [9] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+6: String id = (String)sess.getAttribute("ID");
+7: try {
+8: 	String responses = request.getParameter("responseField");
+9: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+10: 
+11: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+6: String id = (String)sess.getAttribute("ID");
+7: try {
+8: 	String responses = request.getParameter("responseField");
+9: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+10: 
+11: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONValue cannot be resolved
+6: String id = (String)sess.getAttribute("ID");
+7: try {
+8: 	String responses = request.getParameter("responseField");
+9: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+10: 
+11: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+12: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+25-Mar-2019 20:32:17.327 SEVERE [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONValue cannot be resolved
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONValue cannot be resolved
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+25-Mar-2019 20:32:54.079 SEVERE [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONValue cannot be resolved
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONValue cannot be resolved
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+25-Mar-2019 20:33:17.719 SEVERE [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONValue cannot be resolved
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONValue cannot be resolved
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+25-Mar-2019 20:34:57.541 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\work\Catalina\localhost\ROOT\org\apache\jsp\jsp\decisionGuide_jsp.java]
+Only a type can be imported. json.JSONObject resolves to a package
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONValue cannot be resolved
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\work\Catalina\localhost\ROOT\org\apache\jsp\jsp\decisionGuide_jsp.java]
+Only a type can be imported. json.JSONObject resolves to a package
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONValue cannot be resolved
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+25-Mar-2019 20:35:17.845 SEVERE [http-nio-8080-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\work\Catalina\localhost\ROOT\org\apache\jsp\jsp\decisionGuide_jsp.java]
+Only a type can be imported. org.json.JSONObject resolves to a package
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONValue cannot be resolved
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\work\Catalina\localhost\ROOT\org\apache\jsp\jsp\decisionGuide_jsp.java]
+Only a type can be imported. org.json.JSONObject resolves to a package
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONValue cannot be resolved
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+25-Mar-2019 20:35:48.772 SEVERE [http-nio-8080-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONValue cannot be resolved
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONValue cannot be resolved
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+25-Mar-2019 20:36:02.158 SEVERE [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\work\Catalina\localhost\ROOT\org\apache\jsp\jsp\decisionGuide_jsp.java]
+Only a type can be imported. org.json.simple.JSONObject resolves to a package
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONValue cannot be resolved
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\work\Catalina\localhost\ROOT\org\apache\jsp\jsp\decisionGuide_jsp.java]
+Only a type can be imported. org.json.simple.JSONObject resolves to a package
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONValue cannot be resolved
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+25-Mar-2019 20:37:06.824 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\work\Catalina\localhost\ROOT\org\apache\jsp\jsp\decisionGuide_jsp.java]
+Only a type can be imported. net.sf.json.JSONObject resolves to a package
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONValue cannot be resolved
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\work\Catalina\localhost\ROOT\org\apache\jsp\jsp\decisionGuide_jsp.java]
+Only a type can be imported. net.sf.json.JSONObject resolves to a package
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONObject cannot be resolved to a type
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+An error occurred at line: [10] in the jsp file: [/jsp/decisionGuide.jsp]
+JSONValue cannot be resolved
+7: String id = (String)sess.getAttribute("ID");
+8: try {
+9: 	String responses = request.getParameter("responseField");
+10: 	JSONObject myObject = (JSONObject) JSONValue.parse(responses); 
+11: 
+12: Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+13: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+25-Mar-2019 20:48:56.234 SEVERE [http-nio-8080-exec-4] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [43] in the jsp file: [/jsp/summary.jsp]
+score cannot be resolved to a variable
+40: 		sum += Integer.parseInt(data[i]);
+41: 	}
+42: 	String suggestion = "Surgery";
+43: 	if(score >= 11)
+44: 	{
+45: 		suggestion = "Medication";
+46: 	}
+
+
+An error occurred at line: [47] in the jsp file: [/jsp/summary.jsp]
+score cannot be resolved to a variable
+44: 	{
+45: 		suggestion = "Medication";
+46: 	}
+47: 	out.println("<tr> <td>"+num+"</td> <td>"+score+"</td><td>"+suggestion+"</td></tr>");
+48: }
+49:   } catch(Exception e) {
+50:     out.println(e.getMessage());
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [43] in the jsp file: [/jsp/summary.jsp]
+score cannot be resolved to a variable
+40: 		sum += Integer.parseInt(data[i]);
+41: 	}
+42: 	String suggestion = "Surgery";
+43: 	if(score >= 11)
+44: 	{
+45: 		suggestion = "Medication";
+46: 	}
+
+
+An error occurred at line: [47] in the jsp file: [/jsp/summary.jsp]
+score cannot be resolved to a variable
+44: 	{
+45: 		suggestion = "Medication";
+46: 	}
+47: 	out.println("<tr> <td>"+num+"</td> <td>"+score+"</td><td>"+suggestion+"</td></tr>");
+48: }
+49:   } catch(Exception e) {
+50:     out.println(e.getMessage());
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+25-Mar-2019 20:49:13.217 SEVERE [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [47] in the jsp file: [/jsp/summary.jsp]
+score cannot be resolved to a variable
+44: 	{
+45: 		suggestion = "Medication";
+46: 	}
+47: 	out.println("<tr> <td>"+num+"</td> <td>"+score+"</td><td>"+suggestion+"</td></tr>");
+48: }
+49:   } catch(Exception e) {
+50:     out.println(e.getMessage());
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [47] in the jsp file: [/jsp/summary.jsp]
+score cannot be resolved to a variable
+44: 	{
+45: 		suggestion = "Medication";
+46: 	}
+47: 	out.println("<tr> <td>"+num+"</td> <td>"+score+"</td><td>"+suggestion+"</td></tr>");
+48: }
+49:   } catch(Exception e) {
+50:     out.println(e.getMessage());
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+25-Mar-2019 20:52:03.153 SEVERE [http-nio-8080-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [78] in the jsp file: [/jsp/summary.jsp]
+String literal is not properly closed by a double-quote
+75: 
+76: ResultSet rs = ps.executeQuery();
+77: 
+78: out.println("div id = 'content'>);
+79: out.println("<table class = 'gridtable' style = 'width: 100%'>");
+80: out.println("<tr> <th>Summary #</th><th>Overall Score</th><th>Suggested Treatment</th></tr>");
+81: 
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [78] in the jsp file: [/jsp/summary.jsp]
+String literal is not properly closed by a double-quote
+75: 
+76: ResultSet rs = ps.executeQuery();
+77: 
+78: out.println("div id = 'content'>);
+79: out.println("<table class = 'gridtable' style = 'width: 100%'>");
+80: out.println("<tr> <th>Summary #</th><th>Overall Score</th><th>Suggested Treatment</th></tr>");
+81: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+25-Mar-2019 21:00:07.394 SEVERE [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [107] in the jsp file: [/jsp/summary.jsp]
+String literal is not properly closed by a double-quote
+104: 	out.println("<br><br>");
+105: 	out.println("<form id = 'contact-form'>");
+106: 	out.println("<input type = 'hidden' name = 'contact_number'>");
+107: 	out.println("<label>Name</label>
+108: 	out.println("<input type = 'text' name = 'user_name'>);
+109: 	out.println("<label>Email</label>");
+110: 	out.println("<input type = 'email' name = 'user_email'>");
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [107] in the jsp file: [/jsp/summary.jsp]
+String literal is not properly closed by a double-quote
+104: 	out.println("<br><br>");
+105: 	out.println("<form id = 'contact-form'>");
+106: 	out.println("<input type = 'hidden' name = 'contact_number'>");
+107: 	out.println("<label>Name</label>
+108: 	out.println("<input type = 'text' name = 'user_name'>);
+109: 	out.println("<label>Email</label>");
+110: 	out.println("<input type = 'email' name = 'user_email'>");
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+25-Mar-2019 21:00:21.355 SEVERE [http-nio-8080-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [108] in the jsp file: [/jsp/summary.jsp]
+String literal is not properly closed by a double-quote
+105: 	out.println("<form id = 'contact-form'>");
+106: 	out.println("<input type = 'hidden' name = 'contact_number'>");
+107: 	out.println("<label>Name</label>");
+108: 	out.println("<input type = 'text' name = 'user_name'>);
+109: 	out.println("<label>Email</label>");
+110: 	out.println("<input type = 'email' name = 'user_email'>");
+111: 	out.println("<label>Message</label>");
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [108] in the jsp file: [/jsp/summary.jsp]
+String literal is not properly closed by a double-quote
+105: 	out.println("<form id = 'contact-form'>");
+106: 	out.println("<input type = 'hidden' name = 'contact_number'>");
+107: 	out.println("<label>Name</label>");
+108: 	out.println("<input type = 'text' name = 'user_name'>);
+109: 	out.println("<label>Email</label>");
+110: 	out.println("<input type = 'email' name = 'user_email'>");
+111: 	out.println("<label>Message</label>");
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+

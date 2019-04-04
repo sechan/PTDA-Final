@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+</head>
+<body>
+
+  <!--[if lte IE 9]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <!-- Add your site or application content here -->
+  <script src="../js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="../js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="../js/plugins.js"></script>
+  <script src="../js/main.js"></script>
+  <script type="text/javascript" src="../js/main.js"></script>
+
+  <!-- Basic Navigation -->
+  <div class="container">
+    <nav class="navbar">
+      <a href="../index.html" class="w3-button w3-bar-item">Home</a>
+      <a href="../jsp/decision.jsp" class="w3-button w3-bar-item">Decision Guide</a>
+      <a href="../jsp/summary.jsp" class="w3-button w3-bar-item">Summary</a>
+      <a href="../jsp/forumPosts.jsp" class="w3-button w3-bar-item">Forums</a>
+      <a href="../jsp/doctor.jsp" class="w3-button w3-bar-item">Doctor Portal</a>
+      <div class="dropdown">
+        <button class="dropbtn w3-bar-item">More</button>
+        <div class="dropdown-content">
+          <a href="register.html" class="w3-button w3-bar-item">Sign Up</a>
+          <a href="login.html" class="w3-button w3-bar-item">Sign In</a>
+          <a href="../jsp/accountPage.jsp" class="w3-button w3-bar-item">My Account</a>
+          <a href="contact.html" class="w3-button w3-bar-item">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <form action="../jsp/registerToDB.jsp" style="border:1px solid #ccc">
+    <div class="container">
+      <h1>Sign Up</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+
+      <label for="name"><b>Name</b></label>
+      <input type="text" placeholder="Enter Name" name="name" required>
+
+      <label for="age"><b>Age</b></label>
+      <input type="number" placeholder="Enter Age" name="age" required>
+
+
+      <div class="row">
+        <div class="col">
+          <label for="role"><b>User Role</b></label><br>
+          <input type="radio" name="role" value="parent"> Parent<br>
+          <input type="radio" name="role" value="child"> Child
+        </div>
+        <div class="col">
+          <label for="level"><b>User Level</b></label>
+          <br>
+          <input type="radio" name="level" value="simple"> Simple <br>
+          <input type="radio" name="level" value="advanced"> Advanced
+        </div>
+      </div>
+      <br>
+
+      <label for="diagnostic"><b>Diagnostic Information</b></label>
+      <input type="text" name = 'diagnostic' placeholder="Enter all relevant dianostics information">
+
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <div class="clearfix">
+        <button type="button" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</body>
+</html>

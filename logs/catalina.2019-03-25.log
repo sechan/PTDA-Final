@@ -1,0 +1,73 @@
+25-Mar-2019 17:59:01.361 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.37
+25-Mar-2019 17:59:01.380 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Dec 12 2018 12:07:02 UTC
+25-Mar-2019 17:59:01.380 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.37.0
+25-Mar-2019 17:59:01.380 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+25-Mar-2019 17:59:01.380 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+25-Mar-2019 17:59:01.380 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+25-Mar-2019 17:59:01.380 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_191\jre
+25-Mar-2019 17:59:01.380 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_191-b12
+25-Mar-2019 17:59:01.380 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+25-Mar-2019 17:59:01.380 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37
+25-Mar-2019 17:59:01.380 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37
+25-Mar-2019 17:59:01.390 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\conf\logging.properties
+25-Mar-2019 17:59:01.390 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+25-Mar-2019 17:59:01.390 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+25-Mar-2019 17:59:01.390 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+25-Mar-2019 17:59:01.390 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+25-Mar-2019 17:59:01.390 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37
+25-Mar-2019 17:59:01.391 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37
+25-Mar-2019 17:59:01.391 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\temp
+25-Mar-2019 17:59:01.391 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_191\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\sbt\bin;C:\Program Files\Java\jdk1.8.0_191\bin;C:\Program Files\nodejs\;C:\Users\lewen\AppData\Local\Microsoft\WindowsApps;C:\Users\lewen\AppData\Local\Programs\MiKTeX 2.9\miktex\bin\x64\;C:\Users\lewen\Documents\Work\apache-maven-3.6.0\bin;C:\Users\lewen\AppData\Roaming\npm;.]
+25-Mar-2019 17:59:02.751 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+25-Mar-2019 17:59:02.961 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+25-Mar-2019 17:59:02.970 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+25-Mar-2019 17:59:02.970 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+25-Mar-2019 17:59:02.970 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 2071 ms
+25-Mar-2019 17:59:03.008 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+25-Mar-2019 17:59:03.008 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.37
+25-Mar-2019 17:59:03.022 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\webapps\docs]
+25-Mar-2019 17:59:04.425 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+25-Mar-2019 17:59:04.474 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\webapps\docs] has finished in [1,451] ms
+25-Mar-2019 17:59:04.474 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\webapps\examples]
+25-Mar-2019 17:59:05.616 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+25-Mar-2019 17:59:05.658 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\webapps\examples] has finished in [1,184] ms
+25-Mar-2019 17:59:05.658 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\webapps\host-manager]
+25-Mar-2019 17:59:05.820 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+25-Mar-2019 17:59:05.823 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\webapps\host-manager] has finished in [165] ms
+25-Mar-2019 17:59:05.824 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\webapps\manager]
+25-Mar-2019 17:59:06.007 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+25-Mar-2019 17:59:06.010 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\webapps\manager] has finished in [186] ms
+25-Mar-2019 17:59:06.011 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\webapps\ROOT]
+25-Mar-2019 17:59:06.158 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+25-Mar-2019 17:59:06.160 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\webapps\ROOT] has finished in [150] ms
+25-Mar-2019 17:59:06.169 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+25-Mar-2019 17:59:06.176 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+25-Mar-2019 17:59:06.179 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 3200 ms
+25-Mar-2019 20:14:17.650 INFO [http-nio-8080-exec-9] org.apache.coyote.http11.Http11Processor.service Error parsing HTTP request header
+ Note: further occurrences of HTTP header parsing errors will be logged at DEBUG level.
+ java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:479)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:684)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+25-Mar-2019 20:19:03.141 INFO [http-nio-8080-exec-1] org.apache.coyote.http11.Http11Processor.service Error parsing HTTP request header
+ Note: further occurrences of HTTP header parsing errors will be logged at DEBUG level.
+ java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:479)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:684)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+

@@ -1,0 +1,489 @@
+01-Apr-2019 17:41:51.820 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+01-Apr-2019 17:41:51.820 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+01-Apr-2019 17:41:51.820 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@31035ae1')
+01-Apr-2019 17:44:15.679 SEVERE [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [79] in the jsp file: [/jsp/decision.jsp]
+Int cannot be resolved to a type
+76: 			rs.beforeFirst();
+77: 			
+78: 			String questions [] = new String[size];
+79: 			int values [] = new Int[size];
+80: 			
+81: 			int counter = 0;
+82: 
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [79] in the jsp file: [/jsp/decision.jsp]
+Int cannot be resolved to a type
+76: 			rs.beforeFirst();
+77: 			
+78: 			String questions [] = new String[size];
+79: 			int values [] = new Int[size];
+80: 			
+81: 			int counter = 0;
+82: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+01-Apr-2019 18:46:44.077 SEVERE [http-nio-8080-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [56] in the jsp file: [/jsp/accountPage.jsp]
+sess cannot be resolved
+53: 	<a href = "../html/newPost.html">Create a Post</a>
+54: 	
+55: 	<% 
+56: 	String id = (String)sess.getAttribute("ID");
+57: 	  try {
+58: 
+59: 			Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+
+
+An error occurred at line: [71] in the jsp file: [/jsp/accountPage.jsp]
+The method setString(int, String) in the type PreparedStatement is not applicable for the arguments (String, int)
+68: 			String sql = "SELECT * FROM users WHERE userID = ?";
+69: 
+70: 			PreparedStatement ps = conn.prepareStatement(sql);
+71: 			ps.setString(id, 1);
+72: 
+73: 			ResultSet rs = ps.executeQuery();
+74: 
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [56] in the jsp file: [/jsp/accountPage.jsp]
+sess cannot be resolved
+53: 	<a href = "../html/newPost.html">Create a Post</a>
+54: 	
+55: 	<% 
+56: 	String id = (String)sess.getAttribute("ID");
+57: 	  try {
+58: 
+59: 			Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+
+
+An error occurred at line: [71] in the jsp file: [/jsp/accountPage.jsp]
+The method setString(int, String) in the type PreparedStatement is not applicable for the arguments (String, int)
+68: 			String sql = "SELECT * FROM users WHERE userID = ?";
+69: 
+70: 			PreparedStatement ps = conn.prepareStatement(sql);
+71: 			ps.setString(id, 1);
+72: 
+73: 			ResultSet rs = ps.executeQuery();
+74: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+01-Apr-2019 18:47:13.655 SEVERE [http-nio-8080-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [57] in the jsp file: [/jsp/accountPage.jsp]
+sess cannot be resolved
+54: 	
+55: 	<% 
+56: 	  try {
+57: 			String id = (String)sess.getAttribute("ID");
+58: 			Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+59: 
+60: 			String url="jdbc:mysql://localhost:3306/mydb";
+
+
+An error occurred at line: [70] in the jsp file: [/jsp/accountPage.jsp]
+The method setString(int, String) in the type PreparedStatement is not applicable for the arguments (String, int)
+67: 			String sql = "SELECT * FROM users WHERE userID = ?";
+68: 
+69: 			PreparedStatement ps = conn.prepareStatement(sql);
+70: 			ps.setString(id, 1);
+71: 
+72: 			ResultSet rs = ps.executeQuery();
+73: 
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [57] in the jsp file: [/jsp/accountPage.jsp]
+sess cannot be resolved
+54: 	
+55: 	<% 
+56: 	  try {
+57: 			String id = (String)sess.getAttribute("ID");
+58: 			Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+59: 
+60: 			String url="jdbc:mysql://localhost:3306/mydb";
+
+
+An error occurred at line: [70] in the jsp file: [/jsp/accountPage.jsp]
+The method setString(int, String) in the type PreparedStatement is not applicable for the arguments (String, int)
+67: 			String sql = "SELECT * FROM users WHERE userID = ?";
+68: 
+69: 			PreparedStatement ps = conn.prepareStatement(sql);
+70: 			ps.setString(id, 1);
+71: 
+72: 			ResultSet rs = ps.executeQuery();
+73: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+01-Apr-2019 18:47:39.066 SEVERE [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [71] in the jsp file: [/jsp/accountPage.jsp]
+The method setString(int, String) in the type PreparedStatement is not applicable for the arguments (String, int)
+68: 			String sql = "SELECT * FROM users WHERE userID = ?";
+69: 
+70: 			PreparedStatement ps = conn.prepareStatement(sql);
+71: 			ps.setString(id, 1);
+72: 
+73: 			ResultSet rs = ps.executeQuery();
+74: 
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [71] in the jsp file: [/jsp/accountPage.jsp]
+The method setString(int, String) in the type PreparedStatement is not applicable for the arguments (String, int)
+68: 			String sql = "SELECT * FROM users WHERE userID = ?";
+69: 
+70: 			PreparedStatement ps = conn.prepareStatement(sql);
+71: 			ps.setString(id, 1);
+72: 
+73: 			ResultSet rs = ps.executeQuery();
+74: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+01-Apr-2019 19:19:08.207 SEVERE [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [25] in the jsp file: [/jsp/updateProfile.jsp]
+ps cannot be resolved to a variable
+22: 
+23: 
+24: 	String sql = "Update users set userName=?, userEmail=?, informationType=?, userPassword = ?, userRole=? where userID = +"+id;
+25: 	ps =conn.prepareStatement(sql);
+26: 	ps.setString(1,username);
+27: 	ps.setString(2,email);
+28: 	ps.setString(3, level);
+
+
+An error occurred at line: [26] in the jsp file: [/jsp/updateProfile.jsp]
+ps cannot be resolved
+23: 
+24: 	String sql = "Update users set userName=?, userEmail=?, informationType=?, userPassword = ?, userRole=? where userID = +"+id;
+25: 	ps =conn.prepareStatement(sql);
+26: 	ps.setString(1,username);
+27: 	ps.setString(2,email);
+28: 	ps.setString(3, level);
+29: 	ps.setString(4, password);
+
+
+An error occurred at line: [27] in the jsp file: [/jsp/updateProfile.jsp]
+ps cannot be resolved
+24: 	String sql = "Update users set userName=?, userEmail=?, informationType=?, userPassword = ?, userRole=? where userID = +"+id;
+25: 	ps =conn.prepareStatement(sql);
+26: 	ps.setString(1,username);
+27: 	ps.setString(2,email);
+28: 	ps.setString(3, level);
+29: 	ps.setString(4, password);
+30: 	ps.setString(5, role);
+
+
+An error occurred at line: [28] in the jsp file: [/jsp/updateProfile.jsp]
+ps cannot be resolved
+25: 	ps =conn.prepareStatement(sql);
+26: 	ps.setString(1,username);
+27: 	ps.setString(2,email);
+28: 	ps.setString(3, level);
+29: 	ps.setString(4, password);
+30: 	ps.setString(5, role);
+31: 	int i = ps.executeUpdate();
+
+
+An error occurred at line: [29] in the jsp file: [/jsp/updateProfile.jsp]
+ps cannot be resolved
+26: 	ps.setString(1,username);
+27: 	ps.setString(2,email);
+28: 	ps.setString(3, level);
+29: 	ps.setString(4, password);
+30: 	ps.setString(5, role);
+31: 	int i = ps.executeUpdate();
+32: 	response.sendRedirect("../index.html");
+
+
+An error occurred at line: [30] in the jsp file: [/jsp/updateProfile.jsp]
+ps cannot be resolved
+27: 	ps.setString(2,email);
+28: 	ps.setString(3, level);
+29: 	ps.setString(4, password);
+30: 	ps.setString(5, role);
+31: 	int i = ps.executeUpdate();
+32: 	response.sendRedirect("../index.html");
+33:   }
+
+
+An error occurred at line: [31] in the jsp file: [/jsp/updateProfile.jsp]
+ps cannot be resolved
+28: 	ps.setString(3, level);
+29: 	ps.setString(4, password);
+30: 	ps.setString(5, role);
+31: 	int i = ps.executeUpdate();
+32: 	response.sendRedirect("../index.html");
+33:   }
+34:   catch(Exception e) {
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [25] in the jsp file: [/jsp/updateProfile.jsp]
+ps cannot be resolved to a variable
+22: 
+23: 
+24: 	String sql = "Update users set userName=?, userEmail=?, informationType=?, userPassword = ?, userRole=? where userID = +"+id;
+25: 	ps =conn.prepareStatement(sql);
+26: 	ps.setString(1,username);
+27: 	ps.setString(2,email);
+28: 	ps.setString(3, level);
+
+
+An error occurred at line: [26] in the jsp file: [/jsp/updateProfile.jsp]
+ps cannot be resolved
+23: 
+24: 	String sql = "Update users set userName=?, userEmail=?, informationType=?, userPassword = ?, userRole=? where userID = +"+id;
+25: 	ps =conn.prepareStatement(sql);
+26: 	ps.setString(1,username);
+27: 	ps.setString(2,email);
+28: 	ps.setString(3, level);
+29: 	ps.setString(4, password);
+
+
+An error occurred at line: [27] in the jsp file: [/jsp/updateProfile.jsp]
+ps cannot be resolved
+24: 	String sql = "Update users set userName=?, userEmail=?, informationType=?, userPassword = ?, userRole=? where userID = +"+id;
+25: 	ps =conn.prepareStatement(sql);
+26: 	ps.setString(1,username);
+27: 	ps.setString(2,email);
+28: 	ps.setString(3, level);
+29: 	ps.setString(4, password);
+30: 	ps.setString(5, role);
+
+
+An error occurred at line: [28] in the jsp file: [/jsp/updateProfile.jsp]
+ps cannot be resolved
+25: 	ps =conn.prepareStatement(sql);
+26: 	ps.setString(1,username);
+27: 	ps.setString(2,email);
+28: 	ps.setString(3, level);
+29: 	ps.setString(4, password);
+30: 	ps.setString(5, role);
+31: 	int i = ps.executeUpdate();
+
+
+An error occurred at line: [29] in the jsp file: [/jsp/updateProfile.jsp]
+ps cannot be resolved
+26: 	ps.setString(1,username);
+27: 	ps.setString(2,email);
+28: 	ps.setString(3, level);
+29: 	ps.setString(4, password);
+30: 	ps.setString(5, role);
+31: 	int i = ps.executeUpdate();
+32: 	response.sendRedirect("../index.html");
+
+
+An error occurred at line: [30] in the jsp file: [/jsp/updateProfile.jsp]
+ps cannot be resolved
+27: 	ps.setString(2,email);
+28: 	ps.setString(3, level);
+29: 	ps.setString(4, password);
+30: 	ps.setString(5, role);
+31: 	int i = ps.executeUpdate();
+32: 	response.sendRedirect("../index.html");
+33:   }
+
+
+An error occurred at line: [31] in the jsp file: [/jsp/updateProfile.jsp]
+ps cannot be resolved
+28: 	ps.setString(3, level);
+29: 	ps.setString(4, password);
+30: 	ps.setString(5, role);
+31: 	int i = ps.executeUpdate();
+32: 	response.sendRedirect("../index.html");
+33:   }
+34:   catch(Exception e) {
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+

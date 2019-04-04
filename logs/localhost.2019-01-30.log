@@ -1,0 +1,498 @@
+30-Jan-2019 20:48:49.023 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+30-Jan-2019 20:48:49.023 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+30-Jan-2019 20:48:49.026 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@2390400d')
+30-Jan-2019 20:51:56.333 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+30-Jan-2019 20:51:56.333 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+30-Jan-2019 20:52:02.179 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+30-Jan-2019 20:52:02.179 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+30-Jan-2019 20:52:02.181 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@2390400d')
+30-Jan-2019 21:09:44.087 SEVERE [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [22] in the jsp file: [/readLoginInfo.jsp]
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+19: out.println("opened");
+20: Statement st=conn.createStatement();
+21: 
+22: String sql = "SELECT userEmail, userPassword FROM users"
+23: 
+24: ResultSet rs = st.executeQuery(sql);
+25: 
+
+
+An error occurred at line: [26] in the jsp file: [/readLoginInfo.jsp]
+Syntax error on token(s), misplaced construct(s)
+23: 
+24: ResultSet rs = st.executeQuery(sql);
+25: 
+26: while(rs.next()){
+27: 	if(email == rs.getString(userEmail)&&password==rs.getString(userPassword)
+28: 		println("Successful login");
+29: 	
+
+
+An error occurred at line: [28] in the jsp file: [/readLoginInfo.jsp]
+The method println(String) is undefined for the type readLoginInfo_jsp
+25: 
+26: while(rs.next()){
+27: 	if(email == rs.getString(userEmail)&&password==rs.getString(userPassword)
+28: 		println("Successful login");
+29: 	
+30:   }
+31:   catch(Exception e) {
+
+
+An error occurred at line: [164] in the generated java file: [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\work\Catalina\localhost\ROOT\org\apache\jsp\readLoginInfo_jsp.java]
+Syntax error on token "}", delete this token
+
+An error occurred at line: [165] in the generated java file: [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\work\Catalina\localhost\ROOT\org\apache\jsp\readLoginInfo_jsp.java]
+Syntax error, insert "}" to complete ClassBody
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [22] in the jsp file: [/readLoginInfo.jsp]
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+19: out.println("opened");
+20: Statement st=conn.createStatement();
+21: 
+22: String sql = "SELECT userEmail, userPassword FROM users"
+23: 
+24: ResultSet rs = st.executeQuery(sql);
+25: 
+
+
+An error occurred at line: [26] in the jsp file: [/readLoginInfo.jsp]
+Syntax error on token(s), misplaced construct(s)
+23: 
+24: ResultSet rs = st.executeQuery(sql);
+25: 
+26: while(rs.next()){
+27: 	if(email == rs.getString(userEmail)&&password==rs.getString(userPassword)
+28: 		println("Successful login");
+29: 	
+
+
+An error occurred at line: [28] in the jsp file: [/readLoginInfo.jsp]
+The method println(String) is undefined for the type readLoginInfo_jsp
+25: 
+26: while(rs.next()){
+27: 	if(email == rs.getString(userEmail)&&password==rs.getString(userPassword)
+28: 		println("Successful login");
+29: 	
+30:   }
+31:   catch(Exception e) {
+
+
+An error occurred at line: [164] in the generated java file: [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\work\Catalina\localhost\ROOT\org\apache\jsp\readLoginInfo_jsp.java]
+Syntax error on token "}", delete this token
+
+An error occurred at line: [165] in the generated java file: [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\work\Catalina\localhost\ROOT\org\apache\jsp\readLoginInfo_jsp.java]
+Syntax error, insert "}" to complete ClassBody
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+30-Jan-2019 21:10:10.371 SEVERE [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [26] in the jsp file: [/readLoginInfo.jsp]
+Syntax error on token(s), misplaced construct(s)
+23: 
+24: ResultSet rs = st.executeQuery(sql);
+25: 
+26: while(rs.next()){
+27: 	if(email == rs.getString(userEmail)&&password==rs.getString(userPassword)
+28: 		println("Successful login");
+29: 	
+
+
+An error occurred at line: [28] in the jsp file: [/readLoginInfo.jsp]
+The method println(String) is undefined for the type readLoginInfo_jsp
+25: 
+26: while(rs.next()){
+27: 	if(email == rs.getString(userEmail)&&password==rs.getString(userPassword)
+28: 		println("Successful login");
+29: 	
+30:   }
+31:   catch(Exception e) {
+
+
+An error occurred at line: [164] in the generated java file: [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\work\Catalina\localhost\ROOT\org\apache\jsp\readLoginInfo_jsp.java]
+Syntax error on token "}", delete this token
+
+An error occurred at line: [165] in the generated java file: [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\work\Catalina\localhost\ROOT\org\apache\jsp\readLoginInfo_jsp.java]
+Syntax error, insert "}" to complete ClassBody
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [26] in the jsp file: [/readLoginInfo.jsp]
+Syntax error on token(s), misplaced construct(s)
+23: 
+24: ResultSet rs = st.executeQuery(sql);
+25: 
+26: while(rs.next()){
+27: 	if(email == rs.getString(userEmail)&&password==rs.getString(userPassword)
+28: 		println("Successful login");
+29: 	
+
+
+An error occurred at line: [28] in the jsp file: [/readLoginInfo.jsp]
+The method println(String) is undefined for the type readLoginInfo_jsp
+25: 
+26: while(rs.next()){
+27: 	if(email == rs.getString(userEmail)&&password==rs.getString(userPassword)
+28: 		println("Successful login");
+29: 	
+30:   }
+31:   catch(Exception e) {
+
+
+An error occurred at line: [164] in the generated java file: [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\work\Catalina\localhost\ROOT\org\apache\jsp\readLoginInfo_jsp.java]
+Syntax error on token "}", delete this token
+
+An error occurred at line: [165] in the generated java file: [C:\Users\lewen\Documents\School\Advanced Project\apache-tomcat-8.5.37\apache-tomcat-8.5.37\work\Catalina\localhost\ROOT\org\apache\jsp\readLoginInfo_jsp.java]
+Syntax error, insert "}" to complete ClassBody
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+30-Jan-2019 21:11:25.153 SEVERE [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [27] in the jsp file: [/readLoginInfo.jsp]
+userEmail cannot be resolved to a variable
+24: ResultSet rs = st.executeQuery(sql);
+25: 
+26: while(rs.next()){
+27: 	if(email == rs.getString(userEmail)&&password==rs.getString(userPassword)
+28: 	{
+29: 		println("Successful login");
+30: 	}
+
+
+An error occurred at line: [27] in the jsp file: [/readLoginInfo.jsp]
+userPassword cannot be resolved to a variable
+24: ResultSet rs = st.executeQuery(sql);
+25: 
+26: while(rs.next()){
+27: 	if(email == rs.getString(userEmail)&&password==rs.getString(userPassword)
+28: 	{
+29: 		println("Successful login");
+30: 	}
+
+
+An error occurred at line: [27] in the jsp file: [/readLoginInfo.jsp]
+Syntax error, insert ") Statement" to complete BlockStatements
+24: ResultSet rs = st.executeQuery(sql);
+25: 
+26: while(rs.next()){
+27: 	if(email == rs.getString(userEmail)&&password==rs.getString(userPassword)
+28: 	{
+29: 		println("Successful login");
+30: 	}
+
+
+An error occurred at line: [29] in the jsp file: [/readLoginInfo.jsp]
+The method println(String) is undefined for the type readLoginInfo_jsp
+26: while(rs.next()){
+27: 	if(email == rs.getString(userEmail)&&password==rs.getString(userPassword)
+28: 	{
+29: 		println("Successful login");
+30: 	}
+31: 	
+32:   }
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [27] in the jsp file: [/readLoginInfo.jsp]
+userEmail cannot be resolved to a variable
+24: ResultSet rs = st.executeQuery(sql);
+25: 
+26: while(rs.next()){
+27: 	if(email == rs.getString(userEmail)&&password==rs.getString(userPassword)
+28: 	{
+29: 		println("Successful login");
+30: 	}
+
+
+An error occurred at line: [27] in the jsp file: [/readLoginInfo.jsp]
+userPassword cannot be resolved to a variable
+24: ResultSet rs = st.executeQuery(sql);
+25: 
+26: while(rs.next()){
+27: 	if(email == rs.getString(userEmail)&&password==rs.getString(userPassword)
+28: 	{
+29: 		println("Successful login");
+30: 	}
+
+
+An error occurred at line: [27] in the jsp file: [/readLoginInfo.jsp]
+Syntax error, insert ") Statement" to complete BlockStatements
+24: ResultSet rs = st.executeQuery(sql);
+25: 
+26: while(rs.next()){
+27: 	if(email == rs.getString(userEmail)&&password==rs.getString(userPassword)
+28: 	{
+29: 		println("Successful login");
+30: 	}
+
+
+An error occurred at line: [29] in the jsp file: [/readLoginInfo.jsp]
+The method println(String) is undefined for the type readLoginInfo_jsp
+26: while(rs.next()){
+27: 	if(email == rs.getString(userEmail)&&password==rs.getString(userPassword)
+28: 	{
+29: 		println("Successful login");
+30: 	}
+31: 	
+32:   }
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+30-Jan-2019 21:15:20.309 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [24] in the jsp file: [/readLoginInfo.jsp]
+con cannot be resolved
+21: 
+22: String sql = "SELECT * FROM users WHERE userEmail = ? AND userPassword = ?";
+23: 
+24: PreparedStatement ps = con.prepareStatement(sql);
+25: ps.setString(1, email);
+26: ps.setString(2, password);
+27: 
+
+
+An error occurred at line: [30] in the jsp file: [/readLoginInfo.jsp]
+rs cannot be resolved
+27: 
+28: ResultSet ts = ps.executeQuery();
+29: 
+30: if(!rs.next())
+31: {
+32: 	out.println("Incorrect username or password");
+33: }
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [24] in the jsp file: [/readLoginInfo.jsp]
+con cannot be resolved
+21: 
+22: String sql = "SELECT * FROM users WHERE userEmail = ? AND userPassword = ?";
+23: 
+24: PreparedStatement ps = con.prepareStatement(sql);
+25: ps.setString(1, email);
+26: ps.setString(2, password);
+27: 
+
+
+An error occurred at line: [30] in the jsp file: [/readLoginInfo.jsp]
+rs cannot be resolved
+27: 
+28: ResultSet ts = ps.executeQuery();
+29: 
+30: if(!rs.next())
+31: {
+32: 	out.println("Incorrect username or password");
+33: }
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+30-Jan-2019 21:15:52.183 SEVERE [http-nio-8080-exec-4] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [29] in the jsp file: [/readLoginInfo.jsp]
+rs cannot be resolved
+26: 
+27: ResultSet ts = ps.executeQuery();
+28: 
+29: if(!rs.next())
+30: {
+31: 	out.println("Incorrect username or password");
+32: }
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [29] in the jsp file: [/readLoginInfo.jsp]
+rs cannot be resolved
+26: 
+27: ResultSet ts = ps.executeQuery();
+28: 
+29: if(!rs.next())
+30: {
+31: 	out.println("Incorrect username or password");
+32: }
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+30-Jan-2019 21:17:15.266 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+30-Jan-2019 21:17:15.266 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
