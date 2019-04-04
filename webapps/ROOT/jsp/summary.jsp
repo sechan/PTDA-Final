@@ -39,6 +39,7 @@
 <script>window.jQuery || document.write('<script src="../js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
 <script src="../js/plugins.js"></script>
 <script type="text/javascript" src="../js/exportSummary.js"></script>
+<script src="../js/textHandler.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
 
 
@@ -131,7 +132,7 @@ while(rs.next())
 	out.println("</div>");
 	out.println("<div id = 'editor'></div>");
 	out.println("<hr>");
-	out.println("<div class='createPostComment'><button id = 'cmd'> Export to PDF </button></div>");
+	out.println("<div class='createPostComment'><button id = 'cmdTxt'> Export to TXT </button></div>");
 	out.println("<br>");
 	out.println("<form id = 'contact-form'>");
 	out.println("<input type = 'hidden' name = 'contact_number'>");
