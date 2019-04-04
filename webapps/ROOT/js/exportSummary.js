@@ -22,21 +22,6 @@ $(document).ready(function(){
   //   console.log("PDF created");
   // });
 
-  // Handlers for sending an email button
-  $('#email').unbind("click");
-  $('#email').click(function(){
-    console.log("Send email button clicked");
-    console.log("Email sent!");
-  });
-
-  // Sends email using EmailJS
-  document.getElementById('contact-form').addEventListener('submit', function(event) {
-    console.log("Send button clicked!");
-    event.preventDefault();
-    this.contact_number.value = Math.random() * 100000 | 0;
-    emailjs.sendForm('gmail', 'contact_form', this);
-    console.log("email sent!");
-  });
 
   // Exports text file of what's inside summary div
   function downloadInnerHtml(filename, elId, mimeType) {

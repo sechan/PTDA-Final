@@ -38,7 +38,6 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="../js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
 <script src="../js/plugins.js"></script>
-<script type="text/javascript" src="../js/exportSummary.js"></script>
 <script src="../js/textHandler.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
 
@@ -141,8 +140,8 @@ while(rs.next())
 	out.println("<div class='createPostComment'><label>Email</label></div>");
 	out.println("<div class='createPostComment'><input type = 'text' name = 'user_email'></div>");
 	out.println("<div class='createPostComment'><label>Message</label></div>");
-	out.println("<div class='createPostComment'><textarea class='emailMessage' name='contact'></textarea></div>");
-	out.println("<div class='createPostComment'><input type = 'submit' value = 'Send Email'></div>");
+	out.println("<div class='createPostComment'><textarea style='display:none' class='emailMessage' id='emailMessage' name='text'></textarea></div>");
+	out.println("<div class='createPostComment'><input type = 'submit' id = 'cmdEmail' value = 'Send Email'></div>");
 	out.println("</form>");
   } catch(Exception e) {
     out.println(e.getMessage());
