@@ -82,7 +82,7 @@ ps.setString(1, userID);
 
 ResultSet rs = ps.executeQuery();
 
-out.println("<div id = 'content'>");
+out.println("<div class='postContent'><div id = 'content'>");
 while(rs.next())
 {
 	String num = rs.getString("summaryID");
@@ -96,11 +96,28 @@ while(rs.next())
 	values = values.replace("]", "");
 	values = values.replace("\"", "");
 	
+	String ids = rs.getString("questionID");
+	ids = ids.replace("[", "");
+	ids = ids.replace("]", "");
+	ids = ids.replace("\"", "");
+
+	
 	int sum = 0;
 	String data [] = results.split(",");
 	String questionVals [] = values.split(",");
+	String questionIDs [] = ids.split(",");
 	for(int i = 0; i < data.length; i++)
 	{
+		String query = "SELECT questionText FROM questions WHERE questionID = ?";
+		PreparedStatement ps2 = conn.prepareStatement(query);
+		ps2.setInt(1, Integer.parseInt(questionIDs[i]));
+		
+		ResultSet rs2 = ps2.executeQuery();
+		while(rs2.next())
+		{
+		out.println("<p>"+rs2.getString("questionText")+"</p>");		
+		}
+		out.println("<p>Response: "+data[i]+"</p>");
 		sum += Integer.parseInt(data[i])*Integer.parseInt(questionVals[i]);
 	}
 	String suggestion = "Surgery";
@@ -109,7 +126,7 @@ while(rs.next())
 		suggestion = "Medication";
 	}
 	out.println("<hr>");
-	out.println("<div class='postContent'><p id = 'summaryTest' >Summary number: "+num+"</p> <p>Overall Score: "+sum+"</p><p>Suggested Treatment: "+suggestion+"</p></div>");
+	out.println("<p id = 'summaryTest' >Summary number: "+num+"</p> <p>Overall Score: "+sum+"</p><p>Suggested Treatment: "+suggestion+"</p></div>");
 }
 	out.println("</div>");
 	out.println("<div id = 'editor'></div>");

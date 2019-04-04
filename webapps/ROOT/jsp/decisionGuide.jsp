@@ -8,6 +8,7 @@ String id = (String)sess.getAttribute("ID");
 try {
 	String responses = request.getParameter("responseField");
 	String vals = request.getParameter("valueField");
+	String ids = request.getParameter("idField");
 
 Class.forName("com.mysql.jdbc.Driver").newInstance(); 
 
@@ -18,7 +19,7 @@ String pword="root";
 Connection conn = DriverManager.getConnection(url, user, pword);
 
 
-String sql = "INSERT INTO summaries(results, Users_userID, questionValues, status) values ('"+responses+"','"+id+"','"+vals+"', 'complete')";
+String sql = "INSERT INTO summaries(results, Users_userID, questionValues, questionID, status) values ('"+responses+"','"+id+"','"+vals+"', '"+ids+"', 'complete')";
 
 Statement st = conn.createStatement();
 

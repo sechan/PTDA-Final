@@ -88,6 +88,7 @@
 			String questions [] = new String[size];
 			int originalValues [] = new int[size];
 			int values [] = new int[size];
+			int ids [] = new int[size];
 			
 			int counter = 0;
 
@@ -96,6 +97,7 @@ while(rs.next())
 	questions[counter] = rs.getString("questionText");
 	values [counter] = Math.abs(Integer.parseInt(rs.getString("value")));
 	originalValues [counter] = Integer.parseInt(rs.getString("value"));
+	ids [counter] = Integer.parseInt(rs.getString("questionID"));
 	counter++;
 }
 
@@ -118,6 +120,10 @@ for(int i = 0; i < size; i++)
 			tempVal = originalValues[j];
 			originalValues[j] = originalValues[i];
 			originalValues[i] = tempVal;
+			
+			tempVal = ids[j];
+			ids[j] = ids[i];
+			ids[i] = tempVal;
 		}
 	}
 }
@@ -142,6 +148,7 @@ for(int i = 0; i < size; i++)
 	out.println("<button id = 'finish' type = 'submit'> Complete </button> </center>");
 	out.println("<input type = 'hidden' id ='responseField' name = 'responseField' value = '1'>");
 	out.println("<input type = 'hidden' id ='valueField' name = 'valueField' value = '1'>");
+	out.println("<input type = 'hidden' id ='idField' name = 'idField' value = '1'>");
 	out.println("</div>");
 	out.println("</form>");
 	
@@ -153,12 +160,19 @@ for(int i = 0; i < size; i++)
 		out.println("'"+questions[i]+"',");
 	}
 	out.println("'"+questions[size-1]+"'];");
-		out.println("var values = [");
+	out.println("var values = [");
 	for(int i = 0; i < size-1; i++)
 	{
 		out.println("'"+originalValues[i]+"',");
 	}
 	out.println("'"+originalValues[size-1]+"'];");
+	
+	out.println("var ids = [");
+	for(int i = 0; i < size-1; i++)
+	{
+		out.println("'"+ids[i]+"',");
+	}
+	out.println("'"+ids[size-1]+"'];");
 	out.println("$(window).on('load', function(){ document.getElementById('question').innerHTML = questions[currentQuestion]; document.getElementById('finish').disabled = true;});");
 	
 	out.println("function nextQuestion() {");
@@ -167,7 +181,7 @@ for(int i = 0; i < size; i++)
 	out.println("currentQuestion++; if(currentQuestion != questions.length){document.getElementById('question').innerHTML = questions[currentQuestion];}}"); 
 	out.println("completed();}");
 	
-	out.println("function completed(){if(typeof(responses["+size+"-1])!='undefined') {document.getElementById('responseField').value = (JSON.stringify(responses)); document.getElementById('valueField').value = (JSON.stringify(values)); document.getElementById('next').disabled = true; document.getElementById('finish').disabled = false;}}");
+	out.println("function completed(){if(typeof(responses["+size+"-1])!='undefined') {document.getElementById('responseField').value = (JSON.stringify(responses)); document.getElementById('idField').value = (JSON.stringify(ids)); document.getElementById('valueField').value = (JSON.stringify(values)); document.getElementById('next').disabled = true; document.getElementById('finish').disabled = false;}}");
 
 	out.println("</script>");
 
