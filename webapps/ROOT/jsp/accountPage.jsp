@@ -65,17 +65,19 @@
 
 	<% 
 	  try {
+	  		//gets user session and user ID
 			HttpSession sess = request.getSession();
 			String id = (String)sess.getAttribute("ID");
 			Class.forName("com.mysql.jdbc.Driver").newInstance(); 
-
+			
+			//gets database credentials
 			String url="jdbc:mysql://localhost:3306/mydb";
 			String user="root";
 			String pword="root";
 
 			Connection conn = DriverManager.getConnection(url, user, pword);
 
-
+			//queries from users table by userID
 			String sql = "SELECT * FROM users WHERE userID = ?";
 
 			PreparedStatement ps = conn.prepareStatement(sql);
@@ -83,13 +85,14 @@
 
 			ResultSet rs = ps.executeQuery();
 
-
+//gets user email, name, information type
 while(rs.next())
 {
 	String name = rs.getString("userName");
 	String email = rs.getString("userEmail");
 	String informationType = rs.getString("informationType");
 	
+	//links to change account information
 	out.println("<div class='createPostComment'><a href = 'changeName.jsp' class = 'button'><b>Name: </b>"+name+"</submit></div><br>");
 	out.println("<div class='createPostComment'><a href = 'changeEmail.jsp' class = 'button'><b>Email Address: </b>"+email+"</submit></div><br>");
 	out.println("<div class='createPostComment'><a href = 'changeInformation.jsp' class = 'button'><b>Information Type: </b>"+informationType+"</submit></div><br>");
