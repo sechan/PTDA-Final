@@ -53,6 +53,7 @@
   </div>
   <hr>
 
+	<!--place to update user name-->
   <form action="../jsp/updateProfile.jsp"">
     <div>
   <div class="container">
@@ -68,17 +69,19 @@
 
 
   try {
+  //get session and userID
 HttpSession sess = request.getSession();
 String id = (String)sess.getAttribute("ID");
 Class.forName("com.mysql.jdbc.Driver").newInstance(); 
 
+//get database credentials
 String url="jdbc:mysql://localhost:3306/mydb";
 String user="root";
 String pword="root";
 
 Connection conn = DriverManager.getConnection(url, user, pword);
 
-
+//query from users by id
 String sql = "SELECT * FROM users WHERE userID = ?";
 
 PreparedStatement ps = conn.prepareStatement(sql);
@@ -86,6 +89,7 @@ ps.setString(1, id);
 
 ResultSet rs = ps.executeQuery();
 
+//update hidden field with other user information
 while(rs.next())
 {
 	out.println("<input type = 'hidden' id ='psw' name = 'psw' value = "+rs.getString("userPassword")+">");
