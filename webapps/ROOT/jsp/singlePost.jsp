@@ -58,18 +58,19 @@
   </div>
 
 	<% 
+	//gets postID
 	String postID = request.getParameter("postID");
 	  try {
 
 			Class.forName("com.mysql.jdbc.Driver").newInstance(); 
-
+			//gets database credentials
 			String url="jdbc:mysql://127.0.0.1:3306/mydb";
 			String user="root";
 			String pword="root";
 
 			Connection conn = DriverManager.getConnection(url, user, pword);
 
-
+			//gets all information from posts for current ID
 			String sql = "SELECT * FROM posts WHERE postID = ?";
 			
 			PreparedStatement ps = conn.prepareStatement(sql);
@@ -77,7 +78,7 @@
 
 			ResultSet rs = ps.executeQuery();
 
-
+			//prints post information
 			while(rs.next())
 			{
 				String currentTitle = rs.getString("Title");
@@ -88,19 +89,21 @@
 				out.println("<h1><center>"+currentTitle+"</h1>");
 				out.println("<div class='postContent'><p>"+content+"</p></div>");
 				
+				//gets information about the poster by their ID
 				String sql2 = "SELECT * From users WHERE userID = ?";
 			
 				PreparedStatement ps2 = conn.prepareStatement(sql2);
 				ps2.setString(1, posterID);
 
 				ResultSet rs2 = ps2.executeQuery();
-				
+				//prints poster's name
 				while(rs2.next())
 				{
 					String name = rs2.getString("userName");
 					out.println("<div class='postedBy'><p> Posted by:<b> "+name+"</b></p></div>");
 					out.println("<hr>");
 					
+					//gets all comments from post
 					String sql3 = "SELECT * FROM comments WHERE postID = ?";
 					
 					PreparedStatement ps3 = conn.prepareStatement(sql3);
@@ -110,11 +113,13 @@
 					
 					out.println("<div class='postComment'><b>Comments: </b></div>");
 					
+					//prints comment information
 					while(rs3.next())
 					{
 						String comments = rs3.getString("commentContent");
 						String commenterID = rs3.getString("commenterID");
 						
+						//gets commenter by their ide
 						String sql4 = "SELECT * FROM users WHERE userID = ?";
 						
 						PreparedStatement ps4 = conn.prepareStatement(sql4);
@@ -123,7 +128,7 @@
 						ResultSet rs4 = ps4.executeQuery();
 						
 						out.println("<div class='postComment'><p>"+comments+"</p></div>");
-						
+						//prints commenter's name
 						while(rs4.next())
 						{
 							String commenter = rs4.getString("userName");
@@ -134,7 +139,7 @@
 						
 					}
 				}
-
+			//place to input comment
 				out.println("</center>");
 			out.println("<form action = 'submitComment.jsp'>");
 			out.println("<input type = 'hidden' id ='postID' name = 'postID' value = "+postID+">");
