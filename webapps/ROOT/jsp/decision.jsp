@@ -65,24 +65,25 @@
 	  try {
 
 			Class.forName("com.mysql.jdbc.Driver").newInstance(); 
-
+			
+			//get database credentials
 			String url="jdbc:mysql://localhost:3306/mydb";
 			String user="root";
 			String pword="root";
 
 			Connection conn = DriverManager.getConnection(url, user, pword);
 
-
+			//get all questions
 			String sql = "SELECT * FROM questions";
 
 			PreparedStatement ps = conn.prepareStatement(sql);
 
 			ResultSet rs = ps.executeQuery();
 			
+			//get the number of questions
 			rs.last();
-			
 			int size = rs.getRow();
-			
+			//set back to the start of the result set
 			rs.beforeFirst();
 			
 			String questions [] = new String[size];
@@ -94,6 +95,7 @@
 
 while(rs.next())
 {
+	//enter vaues for questions, values, question IDs
 	questions[counter] = rs.getString("questionText");
 	values [counter] = Math.abs(Integer.parseInt(rs.getString("value")));
 	originalValues [counter] = Integer.parseInt(rs.getString("value"));
@@ -101,7 +103,7 @@ while(rs.next())
 	counter++;
 }
 
-
+//swaps questions based on the absolute value of the question value
 for(int i = 0; i < size; i++)
 {
 	for(int j = 0; j < size; j++)
@@ -128,6 +130,7 @@ for(int i = 0; i < size; i++)
 	}
 }
 
+//prints form for the decision guide HTML
 	out.println("<form action = 'decisionGuide.jsp'>");
 	out.println("<center>");
 	out.println("<div class='postComment'>");
@@ -152,7 +155,7 @@ for(int i = 0; i < size; i++)
 	out.println("</div>");
 	out.println("</form>");
 	
-	
+	//initialize the javascript variables
 	out.println("<script> var currentQuestion = 0; var responses = []");
 	out.println("var questions = [");
 	for(int i = 0; i < size-1; i++)
@@ -173,14 +176,17 @@ for(int i = 0; i < size; i++)
 		out.println("'"+ids[i]+"',");
 	}
 	out.println("'"+ids[size-1]+"'];");
+	//loads first question into view
 	out.println("$(window).on('load', function(){ document.getElementById('question').innerHTML = questions[currentQuestion]; document.getElementById('finish').disabled = true;});");
 	
+	//stores response and loads the next question
 	out.println("function nextQuestion() {");
 	out.println("if(currentQuestion < questions.length) {  var radios = document.getElementsByName('Score');");
 	out.println("for(var i = 0; i < 5; i++) {if(radios[i].checked) { responses[currentQuestion] = radios[i].value;}}");
 	out.println("currentQuestion++; if(currentQuestion != questions.length){document.getElementById('question').innerHTML = questions[currentQuestion];}}"); 
 	out.println("completed();}");
 	
+	//if decision guide is completed, save the responses, question values, and question IDs in hidden fields to be retrieved by server
 	out.println("function completed(){if(typeof(responses["+size+"-1])!='undefined') {document.getElementById('responseField').value = (JSON.stringify(responses)); document.getElementById('idField').value = (JSON.stringify(ids)); document.getElementById('valueField').value = (JSON.stringify(values)); document.getElementById('next').disabled = true; document.getElementById('finish').disabled = false;}}");
 
 	out.println("</script>");

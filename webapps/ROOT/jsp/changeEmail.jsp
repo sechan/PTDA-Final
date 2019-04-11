@@ -53,6 +53,7 @@
   </div>
   <hr>
 
+<!-- html to enter in updated email address-->
   <form action="../jsp/updateProfile.jsp">
     <div>
       <div class="container">
@@ -68,17 +69,19 @@
 
 
   try {
+  //gets session information and user ID
 HttpSession sess = request.getSession();
 String id = (String)sess.getAttribute("ID");
 Class.forName("com.mysql.jdbc.Driver").newInstance(); 
 
+//gets database credentials
 String url="jdbc:mysql://localhost:3306/mydb";
 String user="root";
 String pword="root";
 
 Connection conn = DriverManager.getConnection(url, user, pword);
 
-
+//gets user by specified ID
 String sql = "SELECT * FROM users WHERE userID = ?";
 
 PreparedStatement ps = conn.prepareStatement(sql);
@@ -86,6 +89,7 @@ ps.setString(1, id);
 
 ResultSet rs = ps.executeQuery();
 
+//updates hidden fields to include all other user information
 while(rs.next())
 {
 	out.println("<input type = 'hidden' id ='psw' name = 'psw' value = "+rs.getString("userPassword")+">");

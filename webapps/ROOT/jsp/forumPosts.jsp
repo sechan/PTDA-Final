@@ -61,14 +61,14 @@
 	  try {
 
 			Class.forName("com.mysql.jdbc.Driver").newInstance(); 
-
+			//get database credentials
 			String url="jdbc:mysql://localhost:3306/mydb";
 			String user="root";
 			String pword="root";
 
 			Connection conn = DriverManager.getConnection(url, user, pword);
 
-
+			//select all post information
 			String sql = "SELECT * FROM posts";
 
 			PreparedStatement ps = conn.prepareStatement(sql);
@@ -77,7 +77,7 @@
 
 			out.println("<table class = 'gridtable' style = 'width: 100%'>");
 			out.println("<tr><th>Posts</th><th>Date Posted</th></tr>");
-
+//print each post's title, timestamp, and id as a link to the post itself
 while(rs.next())
 {
 	String currentTitle = rs.getString("Title");

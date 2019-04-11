@@ -61,6 +61,7 @@
     </nav>
     </div>
   <%
+  //gets session and userID
 HttpSession sess = request.getSession();
 String userID = (String)sess.getAttribute("ID");
 
@@ -68,13 +69,14 @@ String userID = (String)sess.getAttribute("ID");
 
 Class.forName("com.mysql.jdbc.Driver").newInstance(); 
 
+//get database credentials
 String url="jdbc:mysql://localhost:3306/mydb";
 String user="root";
 String pword="root";
 
 Connection conn = DriverManager.getConnection(url, user, pword);
 
-
+//get summary information from the specified user
 String sql = "SELECT * FROM summaries WHERE Users_userID = ?";
 
 PreparedStatement ps = conn.prepareStatement(sql);
@@ -85,6 +87,7 @@ ResultSet rs = ps.executeQuery();
 out.println("<div class='postContent'><div id = 'content'>");
 while(rs.next())
 {
+//pares the information from the database
 	String num = rs.getString("summaryID");
 	String results = rs.getString("results");
 	results = results.replace("[", "");
@@ -108,26 +111,33 @@ while(rs.next())
 	String questionIDs [] = ids.split(",");
 	for(int i = 0; i < data.length; i++)
 	{
+		// get the current question
 		String query = "SELECT questionText FROM questions WHERE questionID = ?";
 		PreparedStatement ps2 = conn.prepareStatement(query);
 		ps2.setInt(1, Integer.parseInt(questionIDs[i]));
 		
 		ResultSet rs2 = ps2.executeQuery();
+		//print the current question on screen
 		while(rs2.next())
 		{
 		out.println("<p>"+rs2.getString("questionText")+"</p>");		
 		}
+		//print the response to the current question
 		out.println("<p>Response: "+data[i]+"</p>");
+		//add the value to the overall score
 		sum += Integer.parseInt(data[i])*Integer.parseInt(questionVals[i]);
 	}
 	String suggestion = "Surgery";
+	//if a positive score suggest medication
 	if(sum >= 0)
 	{
 		suggestion = "Medication";
 	}
+	//print the overall score and suggested treatment
 	out.println("<hr>");
 	out.println("<p id = 'summaryTest' >Summary number: "+num+"</p> <p>Overall Score: "+sum+"</p><p>Suggested Treatment: "+suggestion+"</p></div>");
 }
+	//html to export and email copy of summary
 	out.println("</div>");
 	out.println("<div id = 'editor'></div>");
 	out.println("<hr>");
