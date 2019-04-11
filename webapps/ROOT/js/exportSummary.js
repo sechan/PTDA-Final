@@ -34,12 +34,14 @@ $(document).ready(function(){
     link.click();
   }
 
+  // Name of the exported file, name can be changed here
   var fileName = 'summary.txt';
 
+
+  // JQuery handlers for the export button
   $('#cmdTxt').click(function(){
     console.log("TXT Test Click");
   });
-
   $('#cmdTxt').unbind('click');
   $('#cmdTxt').click(function(){
     console.log('export to text has been clicked');

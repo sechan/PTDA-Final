@@ -1,7 +1,8 @@
+// Up to date handlers for the summary page - summaryJS is still used for some older functions
 $(document).ready(function(){
     console.log("textHandler.js loaded");
 
-    // Exports text file of what's inside summary div
+    // Creates and exports a text file of what's inside summary div
     function downloadInnerHtml(filename, elId, mimeType) {
         var elHtml = document.getElementById(elId).innerHTML;
         var link = document.createElement('a');
@@ -9,7 +10,7 @@ $(document).ready(function(){
 
         var lines = elHtml.split("\n");
 
-        //Loop through the file to remove html tags
+        // Loop through the file to remove html tags
         for(var line = 0; line < lines.length; line++){
             elHtml = elHtml.replace("<p>", " ");
             elHtml = elHtml.replace("</p>", " ");
@@ -23,7 +24,8 @@ $(document).ready(function(){
         link.click();
     }
 
-    // Generates text for the email
+    // Generates text for the email - uses the same functionality of downloadInnerHtml but doesn't export to a text file
+    // Returns the text store in a variable to be used in the email
     function exportEmail(filename, elId, mimeType) {
         var elHtml = document.getElementById(elId).innerHTML;
         var link = document.createElement('a');
@@ -31,7 +33,7 @@ $(document).ready(function(){
 
         var lines = elHtml.split("\n");
 
-        //Loop through the file to remove html tags
+        // Loop through the file to remove html tags
         for(var line = 0; line < lines.length; line++){
             elHtml = elHtml.replace("<p>", " ");
             elHtml = elHtml.replace("</p>", " ");
@@ -42,15 +44,14 @@ $(document).ready(function(){
         return elHtml;
     }
 
-    var fileName =  'tags.txt'; // You can use the .txt extension if you want
+    var fileName =  'summary.txt'; // Change the name of the text file here
 
-    // Text button handler
+    // export the text file button handler
     $('#cmdTxt').click(function(){
         downloadInnerHtml(fileName, 'content','text/html');
     });
 
-
-    // Send email using EmailJS
+    // Send email from mcmasterptda@gmail.com using EmailJS
     document.getElementById('contact-form').addEventListener('submit', function(event) {
 
         console.log("Send button clicked!");

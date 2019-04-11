@@ -1,5 +1,6 @@
+// Javascript handlers for the summary page
 $(document).ready(function(){
-  console.log("summary.js loaded.")
+  console.log("summary.js loaded.");
 
   // Variables needed to create a PDF of the summary
   var doc = new jsPDF();
@@ -9,7 +10,7 @@ $(document).ready(function(){
     }
   };
 
-  // Handlers for PDF export button
+  // Handlers for PDF export button - PDF is no longer used
   $('#cmd').unbind("click");
   $('#cmd').click(function(){
     console.log("button clicked");
@@ -22,10 +23,11 @@ $(document).ready(function(){
     console.log("PDF created");
   });
 
+  // Parameters used for testing
   var templateParams = {
     name: 'Sean',
     notes: 'check this out'
-  }
+  };
 
   // Handlers for sending an email button
   $('#email').unbind("click");
@@ -34,7 +36,7 @@ $(document).ready(function(){
     console.log("Email sent!");
   });
 
-  // Sends email using EmailJS
+  // Sends email from mcmasterptda@gmail.com using EmailJS
   document.getElementById('contact-form').addEventListener('submit', function(event) {
     console.log("Send button clicked!");
     event.preventDefault();
@@ -42,6 +44,4 @@ $(document).ready(function(){
     emailjs.sendForm('gmail', 'contact_form', this);
     console.log("email sent!");
   });
-
-
 });

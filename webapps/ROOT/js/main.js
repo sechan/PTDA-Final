@@ -1,5 +1,4 @@
 // Javascript handling functionality on the main page
-
 $(document).ready(function(){
 
   var myIndex = 0;

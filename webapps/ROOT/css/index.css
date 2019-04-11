@@ -1,3 +1,10 @@
+/*
+Main CSS used for the entire project
+Written by: Sean Chan
+
+Most of the styling here are used for specific cases found throughout the project
+Much of the standard styling of colors and buttons are found from the boilerplate css files
+ */
 .container{
   text-align: center;
   vertical-align: middle;
