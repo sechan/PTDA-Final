@@ -2,6 +2,7 @@
 <%@ page import="java.io.*" %> 
 
 <%
+//gets session, userID, name, role, level, email, and password
 HttpSession sess = request.getSession();
 String id = (String)sess.getAttribute("ID");
 String username = request.getParameter("name");
@@ -13,14 +14,14 @@ String password = request.getParameter("psw");
   try {
 
 Class.forName("com.mysql.jdbc.Driver").newInstance(); 
-
+//gets database credentials
 String url="jdbc:mysql://localhost:3306/mydb";
 String user="root";
 String pword="root";
 
 Connection conn = DriverManager.getConnection(url, user, pword);
 
-
+	//updates user information based on above parameters
 	String sql = "Update users set userName=?, userEmail=?, informationType=?, userPassword = ?, userRole=? where userID = +"+id;
 	PreparedStatement ps =conn.prepareStatement(sql);
 	ps.setString(1,username);
